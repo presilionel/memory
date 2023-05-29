@@ -1,0 +1,42 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device_width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="{% static 'css/style_mod.css' %}" rel="stylesheet" />
+        <title>Home</title>
+        
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo"> NetPredict.</a>
+            <nav class="navbar">
+                <a href="{% url 'home-index' %}">Home</a>
+                <a href="{% url 'mod-index' %}">Model</a>
+                <a href="{% url 'pred-index' %}">Prediction</a>
+                <a href="{% url 'card-index' %}"> Satisfaction Card</a>
+            </nav>
+        </header>
+        <section class="home">
+            <div class="home-content">
+                <h1>Welcome to Customer Satisfaction Predictor</h1>
+                <h3>Orange Cameroon</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nobis perspiciatis alias similique ratione inventore, vitae rem placeat quis animi odit, aliquid earum reiciendis non excepturi voluptates laborum minus illum.</p>
+                <div class="btn-box">
+                    <a href="{% url 'card-index' %}">Satisfaction Card</a>
+                    <a href="#">More</a>
+                </div>
+            </div>
+            <div class="home-sci">
+                <a href="https://twitter.com/Orange_Cameroun"><i class='bx bxl-twitter' ></i></box-icon></a>
+                <a href="https://web.facebook.com/orangecameroun"><i class='bx bxl-facebook'></i></box-icon></a>
+                
+            </div>
+            <span class="home-imgHover"></span>
+        </section>
+    </body>
+    </html>

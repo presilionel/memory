@@ -1,0 +1,156 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <meta name="viewport", content="width=device_width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+        <title>Home</title>
+        
+    </head>
+    <body>
+        <style type="text/css">
+           
+           .contenedor-btn-file input[type="file"] {
+                appearance: none;
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+                z-index: -1;
+            }
+            .contenedor-btn-file {
+                display: inline-block;
+                position: relative;
+                background-color: #ff6500;
+                color: #fff;
+                border: 0;
+                padding: 12px 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 12px rgba(0, 0, 0, .15);
+                overflow: hidden;
+                transition: ease-out 120ms background-color;
+            }
+            .contenedor-btn-file:hover {
+                background-color: #ff6500;
+            }
+            .contenedor-btn-file:active {
+                background-color: #ff6500;
+            }
+            .contenedor-btn-file > i {
+                margin-right: 15px;
+            }
+            
+            .contenedor-btn-file label {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                cursor: pointer;
+            }
+            
+            .contenedor-btn-file.bordeado {
+                background-color: #fff;
+                border: 2px solid #ff6500;
+                color: #186CC3;
+            }
+            .contenedor-btn-file.bordeado:hover {
+                background-color: #ff6500;
+                color: #fff;
+            }
+            </style>
+            
+        <header class="header">
+            <a href="#" class="logo"> NetPredict.</a>
+            <nav class="navbar">
+                <a href="{% url 'home-index' %}">Home</a>
+                <a href="{% url 'mod-index' %}">Model</a>
+                <a href="{% url 'pred-index' %}">Prediction</a>
+                <a href="{% url 'card-index' %}"> Satisfaction Card</a>
+            </nav>
+        </header>
+        <section class="home">
+            <div class="home-content">
+                <h1>Upload Files</h1>
+                <h3>Upload the Excel or CSV files of networks KPIS and QOE</h3>
+                
+                
+                    <form action="" , enctype = "multipart/form-data",method="POST">
+                        <div class="filen">
+                          <!-- <input type="file" ,name="filen" ,id="uploadnet", required>
+                            
+                            <label for="uploadnet", style="
+                                display: inline-block;
+                                text-transform: uppercase;
+                                color: #fff;
+                                background-color: #c0392b;
+                                text-align: center;
+                                padding: 15px 40px;
+                                font-size: 18px;
+                                letter-spacing: 1.5px;
+                                user-select: none;
+                                cursor: pointer;
+                                box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35)
+                                
+                                ">
+                                <style> 
+                                    label:active{
+                                        transform: scale(0.9);
+                                    }
+                                </style> file</label>      
+                        </div>
+                        <div class="filen">
+                            <input type="file" ,name="fileqoe", id="uploadqoe", required>
+                            <label for="uploadqoe", style="
+                            display: inline-block;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #c0392b;
+                            text-align: center;
+                            padding: 15px 40px;
+                            font-size: 18px;
+                            letter-spacing: 1.5px;
+                            user-select: none;
+                            cursor: pointer;
+                            box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35)
+                            
+                            ">QOE file</label>                           
+                        </div> --> 
+                        <div class="contenedor-btn-file">
+                            <i class="fas fa-file",></i>
+                            Network files
+                            <label for="btn-file"></label>
+                            <input type="file" name="filen"  required id="btn-file">
+                        </div>
+                        
+                        <div class="contenedor-btn-file ">
+                            <i class="fas fa-file"></i>
+                            QOE FILES
+                            <label for="btn-file"></label>
+                            <input type="file" name="fileqoe" required id="btn-file">
+                        </div>
+                        <div class="btn-box">
+                             <input type="submit" value="Let's Predict">
+                        </div>
+                       
+                    </form>
+               
+                
+                
+            </div>
+            <div class="home-sci">
+                <a href="https://twitter.com/Orange_Cameroun"><i class='bx bxl-twitter' ></i></box-icon></a>
+                <a href="https://web.facebook.com/orangecameroun"><i class='bx bxl-facebook'></i></box-icon></a>
+                
+            </div>
+            <span class="home-imgHover"></span>
+        </section>
+    </body>
+    </html>
