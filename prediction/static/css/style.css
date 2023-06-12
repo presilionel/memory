@@ -13,8 +13,9 @@ body{
     color: #ededed;  
 }
 
-#uploadnet input[type='file']{
+input[type="file"]{
     display: none;
+    color:aqua;
 }
 
 label{

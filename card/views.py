@@ -6,8 +6,8 @@ import folium
 
 def card_index(request):
 
-    m = folium.Map(location=[9.6635556,4.075445457598786], zoom_start = 4)
-    folium.Marker([19,-12], tooltip='Click for more', popup='yes').add_to(m)
+    m = folium.Map(location=[3.864642047953692, 11.519707959371265], zoom_start = 5)
+    folium.Marker([3.864642047953692, 11.519707959371265], tooltip='Click for more', popup='yes').add_to(m)
     m = m._repr_html_()
     context = {
         'm': m,

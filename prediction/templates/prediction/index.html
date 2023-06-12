@@ -14,58 +14,11 @@
         
     </head>
     <body>
-        <style type="text/css">
-           
-           .contenedor-btn-file input[type="file"] {
-                appearance: none;
-                display: none;
-                visibility: hidden;
-                opacity: 0;
-                z-index: -1;
+        <style> 
+            label:active{
+                transform: scale(0.9);
             }
-            .contenedor-btn-file {
-                display: inline-block;
-                position: relative;
-                background-color: #ff6500;
-                color: #fff;
-                border: 0;
-                padding: 12px 20px;
-                border-radius: 8px;
-                box-shadow: 0 0 12px rgba(0, 0, 0, .15);
-                overflow: hidden;
-                transition: ease-out 120ms background-color;
-            }
-            .contenedor-btn-file:hover {
-                background-color: #ff6500;
-            }
-            .contenedor-btn-file:active {
-                background-color: #ff6500;
-            }
-            .contenedor-btn-file > i {
-                margin-right: 15px;
-            }
-            
-            .contenedor-btn-file label {
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                cursor: pointer;
-            }
-            
-            .contenedor-btn-file.bordeado {
-                background-color: #fff;
-                border: 2px solid #ff6500;
-                color: #186CC3;
-            }
-            .contenedor-btn-file.bordeado:hover {
-                background-color: #ff6500;
-                color: #fff;
-            }
-            </style>
+        </style>
             
         <header class="header">
             <a href="#" class="logo"> NetPredict.</a>
@@ -82,32 +35,27 @@
                 <h3>Upload the Excel or CSV files of networks KPIS and QOE</h3>
                 
                 
-                    <form action="" , enctype = "multipart/form-data",method="POST">
-                        <div class="filen">
-                          <!-- <input type="file" ,name="filen" ,id="uploadnet", required>
-                            
-                            <label for="uploadnet", style="
-                                display: inline-block;
-                                text-transform: uppercase;
-                                color: #fff;
-                                background-color: #c0392b;
-                                text-align: center;
-                                padding: 15px 40px;
-                                font-size: 18px;
-                                letter-spacing: 1.5px;
-                                user-select: none;
-                                cursor: pointer;
-                                box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35)
-                                
-                                ">
-                                <style> 
-                                    label:active{
-                                        transform: scale(0.9);
-                                    }
-                                </style> file</label>      
+                    
+                        <!-- <form action="" , enctype = "multipart/form-data",method="POST">
+                           <div class="filen">
+                           <input type="file" ,name="filenet", required>                           
+                           <label for="uploadqoe", style="
+                           display: inline-block;
+                           text-transform: uppercase;
+                           color: #fff;
+                           background-color: #c0392b;
+                           text-align: center;
+                           padding: 15px 40px;
+                           font-size: 18px;
+                           letter-spacing: 1.5px;
+                           user-select: none;
+                           cursor: pointer;
+                           box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35)
+                           
+                           ">Network file</label>
                         </div>
                         <div class="filen">
-                            <input type="file" ,name="fileqoe", id="uploadqoe", required>
+                            <input type="file" ,name="fileqoe", required>
                             <label for="uploadqoe", style="
                             display: inline-block;
                             text-transform: uppercase;
@@ -122,25 +70,13 @@
                             box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35)
                             
                             ">QOE file</label>                           
-                        </div> --> 
-                        <div class="contenedor-btn-file">
-                            <i class="fas fa-file",></i>
-                            Network files
-                            <label for="btn-file"></label>
-                            <input type="file" name="filen"  required id="btn-file">
-                        </div>
-                        
-                        <div class="contenedor-btn-file ">
-                            <i class="fas fa-file"></i>
-                            QOE FILES
-                            <label for="btn-file"></label>
-                            <input type="file" name="fileqoe" required id="btn-file">
-                        </div>
+                        </div>-->
+                        {{form.as_p}}
                         <div class="btn-box">
                              <input type="submit" value="Let's Predict">
                         </div>
                        
-                    </form>
+                     <!-- </form>-->
                
                 
                 
@@ -152,5 +88,6 @@
             </div>
             <span class="home-imgHover"></span>
         </section>
+        
     </body>
     </html>
